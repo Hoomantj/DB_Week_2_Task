@@ -54,3 +54,42 @@ CREATE TABLE PlayerRegistration(
 );
 
 
+DELETE PlayerRegistration;
+DELETE TeamEntry;
+DELETE Player;
+DELETE Club;
+DELETE Season;
+
+INSERT INTO Season(Year, SeasonName)
+VALUES (2018, 'Winter'),
+       (2018, 'Summer'),
+       (2018,'Spring'),
+       (2018, 'Autumn');
+
+
+INSERT into Club(ClubName, ContactName )
+VALUES ('Mt Martha Basketball Club','Bob Jane'),
+       ('Box Hill Golf Club','Joe Naden'),
+       ('Balwyn Tennis Club','Jim Jimbo'),
+       ('Doncaster Fitness Club','Jone Smith');
+
+
+INSERT into Player(PlayerID, Fname, Lname, Phone)
+VALUES (10002,'John','Howard', 5552345),
+       (10003, 'Julia','Gillard', 5553456),
+       (10004,'Jim','Jafari',5553467),
+       (10005,'Mike','Benjamin',5553356);
+
+INSERT into TeamEntry(ClubName, Year, SeasonName, AgeGroup, TeamNumber)
+VALUES  ('Mt Martha Basketball Club', 2018, 'Summer','U14',1),
+        ('Mt Martha Basketball Club',2018, 'Summer', 'U14',2),
+        ('Mt Martha Basketball Club',2018,'Winter','U14',1),
+        ('Mt Martha Basketball Club',2018,'Winter','U14',2);
+
+INSERT into PlayerRegistration(PlayerID, ClubName, Year, SeasonName, AgeGroup, TeamNumber, DateRegistered)
+VALUES                        (10003, 'Mt Martha Basketball Club', 2018, 'Summer','U14',2,'2018/06/27'),
+                              (10002,'Mt Martha Basketball Club',2018,'Summer','U14',2,'2018/06/27'),
+                              (10004,'Mt Martha Basketball Club',2018,'Summer','U14',1,'2018/06/27'),
+                              (10005,'Mt Martha Basketball Club',2018,'Summer','U14',1,'2018/06/27');
+ 
+
